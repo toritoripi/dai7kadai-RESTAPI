@@ -1,4 +1,4 @@
-package com.example.dai7kadai.RESTAPI;
+package com.example.dai7kadai.restapi;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;

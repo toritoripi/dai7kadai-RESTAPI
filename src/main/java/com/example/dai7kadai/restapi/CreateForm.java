@@ -1,15 +1,21 @@
-package com.example.dai7kadai.RESTAPI;
+package com.example.dai7kadai.restapi;
+
+import jakarta.validation.constraints.Pattern;
+import org.hibernate.validator.constraints.Length;
+import jakarta.validation.constraints.NotBlank;
 
 public class CreateForm {
-
+    @NotBlank
+    @Length(max = 20)
     private String name;
-    private String birthday;
-    private String id;
 
-    public CreateForm(String name, String birthday, String id) {
+    @NotBlank
+    @Pattern(regexp = "^19|20[0-9]{2}-(0[1-9]|1[0-2])-(0[1-9]|[12][0-9]|3[01])$")
+    private String birthday;
+
+    public CreateForm(String name, String birthday) {
         this.name = name;
         this.birthday = birthday;
-        this.id = id;
     }
 
     public String getName() {
@@ -20,10 +26,6 @@ public class CreateForm {
         return birthday;
     }
 
-    public String getId(){
-        return id;
-    }
-
     public void setName(String name) {
         this.name = name;
     }
@@ -32,7 +34,4 @@ public class CreateForm {
         this.birthday = birthday;
     }
 
-    public void setId(String id) {
-        this.id = id;
-    }
 }
