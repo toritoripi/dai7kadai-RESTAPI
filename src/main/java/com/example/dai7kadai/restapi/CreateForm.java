@@ -2,10 +2,8 @@ package com.example.dai7kadai.restapi;
 
 import jakarta.validation.constraints.Pattern;
 import org.hibernate.validator.constraints.Length;
-import org.springframework.validation.annotation.Validated;
 import jakarta.validation.constraints.NotBlank;
 
-@Validated
 public class CreateForm {
     @NotBlank
     @Length(max = 20)
