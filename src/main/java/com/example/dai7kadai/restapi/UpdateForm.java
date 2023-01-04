@@ -3,9 +3,7 @@ package com.example.dai7kadai.restapi;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.Pattern;
 import org.hibernate.validator.constraints.Length;
-import org.springframework.validation.annotation.Validated;
 
-@Validated
 public class UpdateForm {
     @NotBlank
     @Length(max = 20)
